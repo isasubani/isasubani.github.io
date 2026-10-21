@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isa Subani - ATS Friendly CV</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #000000;
+            line-height: 1.5;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #ffffff;
+        }
+
+        h1 {
+            font-size: 24px;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .contact-info {
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        h2 {
+            font-size: 16px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #000000;
+            padding-bottom: 3px;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .section-content {
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin: 0 0 10px 0;
+            font-size: 14px;
+            text-align: justify;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 3px;
+        }
+
+        .job-title {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .company-name {
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        .job-date,
+        .job-location {
+            font-size: 14px;
+        }
+
+        ul {
+            margin: 0 0 15px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            font-size: 14px;
+            margin-bottom: 5px;
+            text-align: justify;
+        }
+
+        .skill-category {
+            font-weight: bold;
+        }
+
+        .project-title {
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        /* Styling khusus saat mencetak / simpan PDF */
+        @media print {
+            body {
+                padding: 0;
+                max-width: 100%;
+            }
+
+            #download-btn-container {
+                display: none !important;
+            }
+
+            a {
+                text-decoration: none;
+                color: #000000;
+            }
+
+            .section-content,
+            ul,
+            p {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- TOMBOL DOWNLOAD PDF -->
+    <div style="text-align: right; margin-bottom: 20px;" id="download-btn-container">
+        <button onclick="downloadPDF()"
+            style="padding: 10px 18px; background-color: #007bff; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: bold; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: background-color 0.2s;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                    d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                <path
+                    d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+            </svg>
+            Unduh PDF
+        </button>
+    </div>
+
+    <!-- BUNGKUSAN KONTEN CV -->
+    <div id="cv-content">
+        <div style="text-align: center; margin-bottom: 20px;">
+            <img src="profile.jpeg" alt="Foto Profil" style="
+          width: 120px; 
+          height: 120px; 
+          border-radius: 50%; 
+          object-fit: cover;
+          border: 1px solid #e0e0e0;
+          display: block;
+          margin: 0 auto;
+        ">
+        </div>
+
+        <!-- HEADER -->
+        <h1>Isa Subani</h1>
+        <div class="contact-info">
+            Kel. Baru, Kec. Pasar Rebo, Jakarta Timur, Indonesia | <a href="mailto:master@isasubani.my.id">master@isasubani.my.id</a><br>
+            <a href="https://www.linkedin.com/in/isa-subani/">linkedin.com/in/isa-subani</a> |
+            <a href="https://github.com/isasubani">github.com/isasubani</a> |
+            <a href="https://isasubani.github.io/">isasubani.github.io</a> |
+            <a href="https://isasubani.my.id/">isasubani.my.id</a>
+        </div>
+
+        <!-- SUMMARY -->
+        <h2>Profil Profesional</h2>
+        <div class="section-content">
+            <p>Saya seorang Backend Engineer dengan pengalaman lebih dari 6 tahun di industri software engineering.
+                Fokus utama saya mengembangkan dan memelihara sistem enterprise menggunakan ekosistem Java dan Spring Boot
+                berbasis arsitektur Microservices dan Hexagonal. Berpengalaman menangani sistem skala besar di berbagai
+                bidang seperti finansial (FIFGO, FMC), ERP ekspor-impor (GPW), platform freelancer (Panggilin), dan ERP
+                perpajakan (ePWC).</p>
+            <p>Terbiasa menangani concurrency, race condition, JVM tuning, serta troubleshooting insiden di
+                server production menggunakan APM Glowroot, Grafana, dan log analyzer(lnav). Memiliki keahlian dalam integrasi
+                payment gateway (AstraPay, Midtrans, Xendit), e-KYC (Liveness &amp; OCR), migrasi skema database (Flyway), setup server
+                Linux, hingga CI/CD dan Docker. Saya juga disiplin menerapkan automated testing (Unit &amp; Integration Testing)
+                serta menjaga kode tetap clean, security, dan maintainable dengan SonarQube, karena saya percaya aplikasi yang
+                sulit di-maintain atau tidak clean akan menimbulkan cost dan risiko teknis yang tinggi kedepannya.</p>
+        </div>
+
+        <!-- EXPERIENCE -->
+        <h2>Pengalaman Kerja</h2>
+
+        <div class="section-content">
+            <div class="job-header">
+                <div>
+                    <span class="job-title">Backend Engineer</span> - <span class="company-name">PT. Nostra Solusi
+                        Teknologi</span>
+                </div>
+                <span class="job-date">Nov 2021 - Saat Ini (4 tahun 10 bulan)</span>
+            </div>
+            <p>Bekerja sebagai Backend Engineer yang bertanggung jawab dalam pengembangan dan pemeliharaan berbagai
+                sistem
+                enterprise, mulai dari migrasi sistem legacy ke arsitektur modern microservices hingga integrasi pihak
+                ketiga.
+                Fokus utama menggunakan ekosistem Java Spring Boot dengan penerapan clean code dengan standar SonarQube.
+            </p>
+
+            <div class="project-title">Proyek: FIFGO (Saat Ini)</div>
+            <ul>
+                <li>Terlibat dalam proses revamp aplikasi FMC (legacy) menjadi FIFGO dengan arsitektur
+                    Hexagonal dan microservices.</li>
+                <li>Mengembangkan dan mengoptimalkan RESTful API backend untuk kebutuhan aplikasi FIFGO Mobile dan Web,
+                    termasuk pembangunan Identity Provider (IDP Service) sendiri untuk manajemen autentikasi dan otorisasi serta menerapkan OAuth2 sebagai integrasi dengan service lain.</li>
+                <li>Mengintegrasikan dengan core service internal FIFGROUP (seperti FIFASTRA, DANASTRA, AMITRA,
+                    SPEKTRA dan FINATRA), payment gateway AstraPay, serta layanan asuransi Astra Buana.</li>
+                <li>Berhasil mengintegrasikan point management engine legacy dengan Astrapay Point untuk reward pada
+                    misi.</li>
+                <li>Mengintegrasikan layanan OCR dan Liveness e-KYC menggunakan Advance AI, VIDA, dan AID.</li>
+                <li>Mengintegrasikan payment gateway AstraPay dengan standar Snap Security.</li>
+                <li>Mengelola versioning dan migrasi skema database PostgreSQL secara terstruktur menggunakan Flyway.</li>
+                <li>Menangani masalah concurrency dan race condition pada transaksi menggunakan teknik conditional atomic update dan asynchronous processing (CompletableFuture dari java 8 &amp; @Async dari spring boot).</li>
+                <li>Melakukan profiling performa, tuning JVM (memory), konfigurasi database (connection poooling), serta investigasi insiden di server production melalui analisis log (lnav) dan monitoring APM (Glowroot, Grafana).</li>
+                <li>Menerapkan pengujian menyeluruh melalui Unit Testing dan Integration Testing (JUnit, Mockito, MockMvc, Testcontainers) serta monitoring code coverage dengan JaCoCo guna menjaga ketika kode direfactor.</li>
+                <li><strong>Teknologi:</strong> Java 17, Spring Boot, Hexagonal Architecture, Microservices, IDP Service, PostgreSQL,
+                    Flyway, Glowroot, Grafana, lnav, JUnit, Mockito, JaCoCo, Testcontainers, AstraPay API, External API Integration, SonarQube.</li>
+            </ul>
+
+            <div class="project-title">Proyek: FMC Mobile – FIFGROUP (Saat Ini)</div>
+            <ul>
+                <li>Mengembangkan dan memelihara layanan backend FMC Mobile untuk mendukung transaksi pembiayaan
+                    pelanggan di seluruh unit bisnis FIFGROUP (SPEKTRA, AMITRA, DANASTRA dan FIFASTRA).</li>
+                <li>Melakukan maintenance, refactoring, dan penanganan bug pada backend legacy yang berbasis Node.js
+                    maupun Spring Boot.</li>
+                <li><strong>Teknologi:</strong> Java, Spring Boot, Node.js, PostgreSQL, MongoDB, REST API.</li>
+            </ul>
+
+            <div class="project-title">Proyek: FMC CMS – FIFGROUP (Saat Ini)</div>
+            <ul>
+                <li>Mengembangkan dan merawat layanan backend CMS internal yang digunakan operasional FIFGROUP untuk
+                    mengelola master data pelanggan, konten aplikasi, manajemen promo/poin, modul FGC, dan access
+                    control (RBAC).</li>
+                <li>Mengoptimalkan performa query database dan reporting data agar dashboard CMS berjalan cepat tanpa
+                    bottleneck.</li>
+                <li><strong>Teknologi:</strong> Java, Spring Boot, MySQL, REST API.</li>
+            </ul>
+
+            <div class="project-title">Proyek: GPW (11 bulan)</div>
+            <ul>
+                <li>Membangun backend service untuk sistem ERP perusahaan ekspor-impor daging skala internasional
+                    (Jepang dan Australia).</li>
+                <li>Mengembangkan modul ERP meliputi master data, quotation, job costing, journal entry, hingga
+                    modul invoicing.</li>
+                <li>Menjaga kualitas kode dan reliabilitas transaksi finansial sesuai standar clean code dibantu
+                    SonarLint.</li>
+                <li><strong>Teknologi:</strong> Java, Spring Boot, MapStruct, PostgreSQL, SonarLint, REST API.</li>
+            </ul>
+        </div>
+
+        <div class="section-content">
+            <div class="job-header">
+                <div>
+                    <span class="job-title">Back End Developer</span> - <span class="company-name">Fintax</span>
+                </div>
+                <span class="job-date">Nov 2020 - Nov 2021 (1 tahun 1 bulan)</span>
+            </div>
+            <p>
+                Bekerja di Fintax sebagai Backend Developer. Mengawali peran dengan mendukung stabilitas dan
+                pemeliharaan platform Pajak.io, kemudian dipercaya bergabung ke dalam tim proyek ePWC untuk
+                mengembangkan TAX ERP.
+            </p>
+            <ul>
+                <li>Mengembangkan dan memelihara backend untuk produk Pajak.io, termasuk penambahan fitur baru dan integrasi dengan third party service.</li>
+                <li>Bertanggung jawab pada proyek TAX ERP untuk klien PwC dalam membangun modul SPTOP Pribadi untuk
+                    kebutuhan pelaporan SPT Tahunan.</li>
+                <li>Membangun backend berbasis microservices menggunakan Spring Boot dan Spring Cloud (Config
+                    Server, Eureka Discovery Service, Spring Cloud Gateway) serta RabbitMQ sebagai message broker.</li>
+            </ul>
+        </div>
+
+        <div class="section-content">
+            <div class="job-header">
+                <div>
+                    <span class="job-title">Java Developer</span> - <span class="company-name">PT. Aliansi Inovasi
+                        Global (Panggilin)</span>
+                </div>
+                <span class="job-date">Mei 2019 - Okt 2020 (1 tahun 6 bulan)</span>
+            </div>
+            <p>
+                Bekerja sebagai Java Developer dengan tanggung jawab mengembangkan dan memelihara aplikasi platform
+                freelancer Panggilin, baik sistem internal (dashboard CMS) maupun aplikasi eksternal untuk pengguna
+                (freelancer/Hero dan pemberi tugas).
+            </p>
+
+            <div class="project-title">Proyek: Panggilin Mobile (17 bulan)</div>
+            <ul>
+                <li>Mengembangkan backend platform yang menghubungkan pembuat tugas dengan freelancer (Hero), mencakup
+                    fitur pembuatan tugas (task creation), alur bidding dan negosiasi, manajemen wallet terintegrasi
+                    Xendit, serta alur penyelesaian tugas.</li>
+                <li>Berhasil mengintegrasikan platform dengan Urbanhire menggunakan SOAP untuk penyediaan fitur lowongan
+                    pekerjaan pada aplikasi Panggilin.</li>
+                <li>Mengembangkan fitur voucher management dan fitur mading informasi.</li>
+                <li>Berhasil melakukan re-write dan migrasi backend aplikasi Panggilin dari Java EE (Jersey) ke Spring Boot.</li>
+                <li><strong>Teknologi:</strong> Java EE (Jersey), Spring Boot, Hibernate, MySQL, Stored Procedures,
+                    Xendit Payment Gateway, Apache Tomcat, GitLab CI/CD, CentOS 6, Android Java XML, Firebase (FCM,
+                    Auth, Google Analytics).</li>
+            </ul>
+
+            <div class="project-title">Proyek: Panggilin CMS (6 bulan)</div>
+            <ul>
+                <li>Membangun dan memelihara fitur dashboard web internal untuk operasional, seperti verifikasi Hero,
+                    manajemen poin, real-time broadcast, chat customer support, dan pengelolaan banner dinamis di
+                    aplikasi mobile.</li>
+                <li><strong>Teknologi:</strong> Java 7, Java EE (Jersey, JSP), jQuery, Bootstrap 3, Kendo UI, MySQL.
+                </li>
+            </ul>
+        </div>
+
+        <!-- EDUCATION -->
+        <h2>Pendidikan</h2>
+        <div class="section-content">
+            <div class="job-header">
+                <div>
+                    <span class="job-title">Universitas Indraprasta PGRI (UNINDRA)</span>
+                </div>
+                <span class="job-date">2021 – 2025</span>
+            </div>
+            <p><strong>Sarjana (S1) Teknik Informatika</strong><br>
+                IPK: 3.48/4.0</p>
+        </div>
+
+        <!-- SKILLS -->
+        <h2>Keahlian Teknis</h2>
+        <div class="section-content">
+            <ul>
+                <li><span class="skill-category">Backend:</span> Java, Python, SQL, Spring Boot, Spring Cloud, Spring
+                    Security,
+                    Spring Data JPA, Spring AI, Java EE (Jersey, JPA, JSP, Servlet), Node.js, Hibernate, Lombok,
+                    MapStruct, SonarQube, JUnit, Mockito, JaCoCo, Testcontainers, MockMvc (Unit &amp; Integration Testing), RabbitMQ, Maven, MapStruct.</li>
+                <li><span class="skill-category">Frontend:</span> HTML/CSS, JavaScript, TypeScript, Vue.js, Angular,
+                    Vaadin, jQuery,
+                    Bootstrap, Thymeleaf dan JSP.</li>
+                <li><span class="skill-category">Database &amp; Optimasi:</span> PostgreSQL, MySQL, MongoDB, Redis,
+                    SQLite, SQL Server;
+                    Flyway (DB Migration), Indexing, Query Optimization, Connection Pooling (HikariCP), JVM Tuning, Caching Strategy, Schema Design, Profiling.</li>
+                <li><span class="skill-category">Observability &amp; DevOps:</span> Linux (Ubuntu, Debian, CentOS), Docker, Git,
+                    GitLab CI/CD, APM Glowroot, Grafana, Log Analyzer (lnav), JetBrains IDE, Postman.</li>
+
+                <li><span class="skill-category">Design Sistem:</span> UML, FlowChart, ERD, Figma</li>
+
+
+                <li><span class="skill-category">AI &amp; Machine Learning:</span> Machine Learning (Classification,
+                    Clustering, Forecasting, Prediction dan assosiasi),
+                    LLM Integration, RAG, AI Agent, Model Context Protocol (MCP).</li>
+                <li><span class="skill-category">Hardware &amp; Jaringan:</span> Hardware Troubleshooting, Perakitan PC,
+                    Jaringan (LAN, MikroTik), Konfigurasi Linux Server (DNS, DHCP).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- LIBRARY DAN SCRIPT EKSPOR KE PDF (METODE LAMA TANPA CORS ERROR) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        function downloadPDF() {
+            var element = document.getElementById('cv-content');
+            var opt = {
+                margin: [10, 10, 10, 10],
+                filename: 'Isa_Subani_CV.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
+        }
+
+        window.addEventListener('DOMContentLoaded', function() {
+            var params = new URLSearchParams(window.location.search);
+            if (params.get('download') === 'true' || window.location.hash === '#download') {
+                setTimeout(downloadPDF, 600);
+            }
+        });
+    </script>
+</body>
+
+</html>

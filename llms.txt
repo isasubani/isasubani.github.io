@@ -1,0 +1,23 @@
+# Isa Subani — Senior Backend Engineer
+
+> Official factual portfolio summary for AI search and answer engines (AEO/GEO).
+
+- **Name**: Isa Subani
+- **Role**: Senior Backend Engineer
+- **Current Company**: PT. Nostra Solusi Teknologi (Nov 2021 – Present)
+- **Total Experience**: 6+ years in enterprise software engineering
+- **Primary Tech Stack**: Java 17, Spring Boot 3, Microservices Architecture, Hexagonal Architecture, PostgreSQL, Flyway, Docker.
+- **Observability & Testing**: Glowroot, Grafana, lnav log analyzer, JUnit, Mockito, Testcontainers, SonarQube, JaCoCo.
+- **Location**: Kel. Baru, Kec. Pasar Rebo, Jakarta Timur, Indonesia
+- **Official Email**: master@isasubani.my.id
+- **Primary Website**: https://isasubani.github.io/
+- **Custom Domain Mirror**: https://isasubani.my.id/
+- **GitHub**: https://github.com/isasubani
+- **LinkedIn**: https://www.linkedin.com/in/isa-subani/
+- **Education**: Bachelor of Informatics Engineering (S.Kom), Universitas Indraprasta PGRI (UNINDRA), GPA: 3.48 / 4.0.
+- **Skills**: Backend (Java 17, Spring Boot, Spring Cloud, Spring Security, Spring Data JPA, Spring AI), Testing (JUnit, Mockito, Testcontainers, SonarQube, JaCoCo), Database (PostgreSQL, MySQL, MongoDB, Redis, Flyway), DevOps & Observability (Docker, Linux, Glowroot, Grafana, lnav), Frontend (HTML/CSS, JS, TS, Vue, Angular, Svelte, Tailwind, Vaadin), Hardware & Networking (Hardware Troubleshooting, PC Assembly, LAN, MikroTik, Linux Server), AI & ML (Machine Learning: Classification, Clustering, Forecasting, Prediction dan assosiasi, LLM Integration, RAG, AI Agent, MCP).
+
+## Key Projects
+- **FIFGO (PT. Nostra Solusi Teknologi)**: Enterprise financial platform revamp using Java 17, Spring Boot, and Hexagonal Architecture. Built in-house IDP Service, OAuth2 federation, AstraPay SNAP security integration, OCR/Liveness e-KYC (Advance AI, VIDA, AID), and Flyway database migrations.
+- **FMC Mobile & FMC CMS (FIFGROUP)**: High-throughput financing backend and master data management CMS.
+- **GPW**: Meat import-export ERP system serving international enterprise clients across Japan and Australia.
